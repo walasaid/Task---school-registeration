@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>نظام المدرسة الثانوية</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+    
+* {
+  box-sizing: border-box;
+    direction: rtl;
+}
+
+input[type=text], select{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #1a3340;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+/*  float: right;*/
+    margin-right: 50%;
+     margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+/*  background-color: #45a049;*/
+                     opacity: 0.7;
+
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 30px;
+}
+
+.col-25 {
+  float: right;
+  width: 15%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+     .name {
+        display: flex;
+        justify-content: space-between;
+    }
+    .name input[type=text] {
+        margin-right: 10px;
+    }
+    .pay {
+        
+        display: flex;
+        justify-content: space-between;
+    }
+    .pay input[type=text] {
+        margin-right: 10px;
+    }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+/*   */
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, .row-submit {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>نظام المدرسة الثانوية</h2>
+<p>تسجيل الطلاب</p>
+
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+        <div class="col-25">
+        <label for="fname">اسم الطالب </label>
+      </div>
+      <div class="col-75 name">
+        <input type="text" id="fname" name="firstname" placeholder=" الاسم الاول">
+          <input type="text" id="fname" name="firstname" placeholder=" الاسم الثاني">
+          <input type="text" id="fname" name="firstname" placeholder=" الاسم الثالث">
+      </div>
+        
+        
+    </div>
+   
+    <div class="row">
+        <div class="col-25">
+        <label for="country">الفصل الدراسي</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">اولى ثانوي</option>
+          <option value="canada">ثانية ثانوي</option>
+          <option value="usa">ثالث ثنوي</option>
+        </select>
+      </div>
+         
+    </div>
+       <div class="row">
+       <div class="col-25">
+        <label for="lname">الرسوم الدراسية</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="الرسوم الدراسية">
+      </div>
+       
+    </div>
+    <div class="row">
+        <div class="col-25">
+        <label for="fname">الاقساط</label>
+      </div>
+      <div class="col-75 pay">
+        <input type="text" id="fname" name="firstname" placeholder=" القسط الاول">
+          <input type="text" id="fname" name="firstname" placeholder=" القسط الثاني">
+          <input type="text" id="fname" name="firstname" placeholder=" القسط الثالث">
+      </div>
+        
+        
+    </div>
+    <div class="row-submit">
+      <input type="submit" value="حفظ">
+<!--        <input type="btuuon" value="الغاء" >-->
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
